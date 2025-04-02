@@ -4,7 +4,7 @@ import sys
 import numpy as np
 import scipy as sp
 from scipy.integrate import ode
-from scipy.integrate import odeint
+from scipy.integrate import solve_ivp
 from scipy.special import zetac
 from scipy.interpolate import interp1d
 from scipy.linalg import expm
