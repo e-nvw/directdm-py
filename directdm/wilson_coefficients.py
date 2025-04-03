@@ -2647,7 +2647,7 @@ class WC_5flavor(object):
             DM_dim6_init = np.delete(self.coeff_list_dm_dim5_dim6_dim7,\
                                      np.r_[np.s_[0:18], np.s_[23:26], np.s_[31:131]])
         elif self.DM_type == "M":
-            DM_dim6_init = np.delete(self.coeff_list_dm_dim5_dim6_dim7, np.r_[np.s_[0:8], np.s_[13:97]])
+            DM_dim6_init = np.delete(self.coeff_list_dm_dim5_dim6_dim7, np.r_[np.s_[0:8], np.s_[13:65]])
         elif self.DM_type == "C":
             DM_dim6_init = np.delete(self.coeff_list_dm_dim5_dim6_dim7, np.r_[np.s_[0:8], np.s_[13:45]])
 
