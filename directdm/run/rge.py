@@ -166,7 +166,7 @@ class AlphaS(object):
         """
         def deriv(mu, alphas):
             return self.__dalphasdmu(mu, alphas, nf, loop)
-        r = solve_ivp(deriv, np.array([mu, mu0]), [as_at_mu])
+        r = solve_ivp(deriv, np.array([mu, mu0]), [as_at_mu], method = 'Radau')
         return r.y[0, -1]
 
     def run(self, dict_mh, dict_mu, mu0, nf, loop):
@@ -296,7 +296,7 @@ class M_Quark_MSbar(object):
                                  AlphaS(self.asMZ,\
                                         self.MZ).run(dict_mh, dict_mu, mu, nf,\
                                                      loop), nf, loop)
-        r = solve_ivp(deriv, np.array([mu0, mu]), [mq_at_mu0])
+        r = solve_ivp(deriv, np.array([mu0, mu]), [mq_at_mu0], method = 'Radau')
         return r.y[0, -1]
 
     def run(self, mu0, dict_mh, dict_mu, nf, loop):
